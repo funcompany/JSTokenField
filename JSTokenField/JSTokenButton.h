@@ -34,8 +34,8 @@
 @property (nonatomic, getter=isToggled) BOOL toggled;
 @property (nonatomic, strong) UIImage *normalBg;
 @property (nonatomic, strong) UIImage *highlightedBg;
-@property (nonatomic, readonly) id representedObject;
-@property (nonatomic, readonly) JSTokenField *parentField;
+@property (nonatomic, strong) id representedObject;
+@property (nonatomic, strong) JSTokenField *parentField;
 
 + (JSTokenButton *)tokenWithString:(NSString *)string representedObject:(id)obj parentField:(JSTokenField *)parentField;
 

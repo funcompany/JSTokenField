@@ -1,9 +1,9 @@
 //
 //	Copyright 2011 James Addyman (JamSoft). All rights reserved.
-//	
+//
 //	Redistribution and use in source and binary forms, with or without modification, are
 //	permitted provided that the following conditions are met:
-//	
+//
 //		1. Redistributions of source code must retain the above copyright notice, this list of
 //			conditions and the following disclaimer.
 //
@@ -30,6 +30,7 @@
 #import "JSBackspaceReportingTextField.h"
 
 @class JSTokenButton;
+
 @protocol JSTokenFieldDelegate;
 
 extern NSString *const JSTokenFieldFrameDidChangeNotification;
@@ -42,10 +43,13 @@ extern NSString *const JSDeletedTokenKey;
 @property (nonatomic, readonly) JSBackspaceReportingTextField *textField;
 @property (nonatomic, readonly) UILabel *label;
 @property (nonatomic, assign) id <JSTokenFieldDelegate> delegate;
+@property (nonatomic, assign) BOOL willBeFirstResponder;
+@property (nonatomic, assign) BOOL forceEnd;
+@property (nonatomic, assign) BOOL singleLine;
 
 - (NSArray *)allTokens;
-
 - (void)addTokenWithTitle:(NSString *)string representedObject:(id)obj;
+- (void)addTokenWithTitle:(NSString *)title token:(JSTokenButton *)token;
 - (void)removeTokenForString:(NSString *)string;
 - (void)removeTokenWithRepresentedObject:(id)representedObject;
 - (void)removeAllTokens;
@@ -60,9 +64,8 @@ extern NSString *const JSDeletedTokenKey;
 - (void)tokenField:(JSTokenField *)tokenField didRemoveToken:(NSString *)title representedObject:(id)obj;
 - (BOOL)tokenField:(JSTokenField *)tokenField shouldRemoveToken:(NSString *)title representedObject:(id)obj;
 
-
+- (void)tokenFieldDidBeginEditing:(JSTokenField *)tokenField;
 - (void)tokenFieldTextDidChange:(JSTokenField *)tokenField;
-
 - (BOOL)tokenFieldShouldReturn:(JSTokenField *)tokenField;
 - (void)tokenFieldDidEndEditing:(JSTokenField *)tokenField;
 

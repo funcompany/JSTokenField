@@ -42,10 +42,10 @@
 		1A1A06A413FEDEEC00CA6645 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A1A06A613FEDEEC00CA6645 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A1A06A813FEDEEC00CA6645 /* JSTokenField-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSTokenField-Prefix.pch"; sourceTree = "<group>"; };
-		1A1A06A913FEDEEC00CA6645 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
-		1A1A06AA13FEDEEC00CA6645 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		1A1A06AC13FEDEEC00CA6645 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
-		1A1A06AD13FEDEEC00CA6645 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		1A1A06A913FEDEEC00CA6645 /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoAppDelegate.h; path = JSTokenField/DemoAppDelegate.h; sourceTree = "<group>"; };
+		1A1A06AA13FEDEEC00CA6645 /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoAppDelegate.m; path = JSTokenField/DemoAppDelegate.m; sourceTree = "<group>"; };
+		1A1A06AC13FEDEEC00CA6645 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoViewController.h; path = JSTokenField/DemoViewController.h; sourceTree = "<group>"; };
+		1A1A06AD13FEDEEC00CA6645 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoViewController.m; path = JSTokenField/DemoViewController.m; sourceTree = "<group>"; };
 		1A1A06B713FEE01C00CA6645 /* JSTokenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTokenButton.h; sourceTree = "<group>"; };
 		1A1A06B813FEE01C00CA6645 /* JSTokenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTokenButton.m; sourceTree = "<group>"; };
 		1A1A06B913FEE01C00CA6645 /* JSTokenField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTokenField.h; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		1A1A06CD13FF000C00CA6645 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		1A1A06CE13FF000C00CA6645 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		751112581A39F76C003EC6C8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7511125A1A39F82A003EC6C8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		7511125A1A39F82A003EC6C8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = JSTokenField/Storyboard.storyboard; sourceTree = "<group>"; };
 		B71650D0144399F800EBF2C7 /* libJSTokenFieldLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJSTokenFieldLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A8303516D2D21500E7587F /* JSBackspaceReportingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBackspaceReportingTextField.h; sourceTree = "<group>"; };
 		B7A8303616D2D21500E7587F /* JSBackspaceReportingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBackspaceReportingTextField.m; sourceTree = "<group>"; };
@@ -91,6 +91,12 @@
 			isa = PBXGroup;
 			children = (
 				751112581A39F76C003EC6C8 /* Default-568h@2x.png */,
+				1A1A06A913FEDEEC00CA6645 /* DemoAppDelegate.h */,
+				1A1A06AA13FEDEEC00CA6645 /* DemoAppDelegate.m */,
+				1A1A06AC13FEDEEC00CA6645 /* DemoViewController.h */,
+				1A1A06AD13FEDEEC00CA6645 /* DemoViewController.m */,
+				7511125A1A39F82A003EC6C8 /* Storyboard.storyboard */,
+				1A1A06A113FEDEEC00CA6645 /* Supporting Files */,
 				1A1A06A013FEDEEC00CA6645 /* JSTokenField */,
 				1A1A069913FEDEEC00CA6645 /* Frameworks */,
 				1A1A069713FEDEEC00CA6645 /* Products */,
@@ -121,16 +127,10 @@
 		1A1A06A013FEDEEC00CA6645 /* JSTokenField */ = {
 			isa = PBXGroup;
 			children = (
-				1A1A06A913FEDEEC00CA6645 /* DemoAppDelegate.h */,
-				1A1A06AA13FEDEEC00CA6645 /* DemoAppDelegate.m */,
-				1A1A06AC13FEDEEC00CA6645 /* DemoViewController.h */,
-				1A1A06AD13FEDEEC00CA6645 /* DemoViewController.m */,
 				1A1A06B913FEE01C00CA6645 /* JSTokenField.h */,
 				1A1A06BA13FEE01C00CA6645 /* JSTokenField.m */,
 				1A1A06B713FEE01C00CA6645 /* JSTokenButton.h */,
 				1A1A06B813FEE01C00CA6645 /* JSTokenButton.m */,
-				7511125A1A39F82A003EC6C8 /* Storyboard.storyboard */,
-				1A1A06A113FEDEEC00CA6645 /* Supporting Files */,
 				B7A8303516D2D21500E7587F /* JSBackspaceReportingTextField.h */,
 				B7A8303616D2D21500E7587F /* JSBackspaceReportingTextField.m */,
 			);
@@ -150,6 +150,7 @@
 				1A1A06C013FEE2D900CA6645 /* tokenNormal@2x.png */,
 			);
 			name = "Supporting Files";
+			path = JSTokenField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -10,19 +10,23 @@
 
 @implementation JSBackspaceReportingTextField
 
-- (void)insertText:(NSString *)text
-{
+- (id)initWithFrame:(CGRect)frame {
+	self = [super initWithFrame:frame];
+	self.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 1)];
+	self.leftViewMode = UITextFieldViewModeAlways;
+	return self;
+}
+
+- (void)insertText:(NSString *)text {
     [super insertText:text];
 }
 
-- (BOOL)keyboardInputShouldDelete:(UITextField *)textField
-{
+- (BOOL)keyboardInputShouldDelete:(UITextField *)textField {
     if (self.text.length == 0) {
         if ([self.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
             [self.delegate textField:self shouldChangeCharactersInRange:NSMakeRange(0, 0) replacementString:@""];
         }
     }
-    
     return YES;
 }
 
