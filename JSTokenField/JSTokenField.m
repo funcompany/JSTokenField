@@ -37,6 +37,7 @@ NSString *const JSDeletedTokenKey = @"JSDeletedTokenKey";
 
 CGFloat const kJSTokenFieldHeightPadding = 6;
 CGFloat const kJSTokenFieldWidthPadding = 10;
+CGFloat const kJSTokenFieldRightViewPadding = 20;
 CGFloat const kJSTokenFieldHeight = 44;
 
 @interface JSTokenField ()
@@ -293,8 +294,12 @@ CGFloat const kJSTokenFieldHeight = 44;
 	textFieldFrame.origin.y += kJSTokenFieldHeightPadding;
 	[self.textField setFrame:textFieldFrame];
 	
+	CGRect rightViewFrame = textFieldFrame;
+	rightViewFrame.origin.x = CGRectGetMaxX(textFieldFrame) + kJSTokenFieldRightViewPadding;
+	rightViewFrame.size.width = 1;
+	
 	[_scrollView setContentSize:CGSizeMake(CGRectGetMaxX(textFieldFrame), _scrollView.frame.size.height)];
-	[_scrollView scrollRectToVisible:textFieldFrame animated:YES];
+	[_scrollView scrollRectToVisible:rightViewFrame animated:YES];
 	
 	CGFloat textFieldMidY = CGRectGetMidY(textFieldFrame);
 	for (UIButton *token in lastLineTokens) {
