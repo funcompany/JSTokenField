@@ -298,7 +298,7 @@ CGFloat const kJSTokenFieldHeight = 44;
 	rightViewFrame.origin.x = CGRectGetMaxX(textFieldFrame) + kJSTokenFieldRightViewPadding;
 	rightViewFrame.size.width = 1;
 	
-	[_scrollView setContentSize:CGSizeMake(CGRectGetMaxX(textFieldFrame), _scrollView.frame.size.height)];
+	[_scrollView setContentSize:CGSizeMake(CGRectGetMaxX(rightViewFrame), _scrollView.frame.size.height)];
 	[_scrollView scrollRectToVisible:rightViewFrame animated:YES];
 	
 	CGFloat textFieldMidY = CGRectGetMidY(textFieldFrame);
