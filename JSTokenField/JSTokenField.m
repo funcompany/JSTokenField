@@ -87,6 +87,7 @@ CGFloat const kJSTokenFieldHeight = 44;
 	_scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	_scrollView.showsHorizontalScrollIndicator = NO;
 	_scrollView.showsVerticalScrollIndicator = NO;
+	_scrollView.layer.cornerRadius = frame.size.height / 2;
 	_scrollView.backgroundColor = [UIColor clearColor];
     _scrollView.clipsToBounds = YES;
 	[self addSubview:_scrollView];
