@@ -9,13 +9,13 @@
 Pod::Spec.new do |s|
 
   s.name         = "JSTokenField"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "A short description of JSTokenField."
   s.homepage     = "http://EXAMPLE/JSTokenField"
   s.license      = "MIT"
   s.author       = "James Addyman"
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "git@github.com:funcompany/JSTokenField.git", :tag => "1.0.4" }
+  s.source       = { :git => "git@github.com:funcompany/JSTokenField.git", :tag => "1.0.5" }
   s.source_files  = "JSTokenField/*.{h,m}"
   s.frameworks = "AddressBook", "AddressBookUI", "CoreGraphics", "Foundation", "UIKit"
   s.requires_arc = true
