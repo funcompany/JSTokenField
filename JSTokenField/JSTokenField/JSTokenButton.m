@@ -106,4 +106,9 @@
 - (BOOL)canBecomeFirstResponder {
     return YES;
 }
+
+- (UITextAutocorrectionType)autocorrectionType {
+  return UITextAutocorrectionTypeNo;
+}
+
 @end
